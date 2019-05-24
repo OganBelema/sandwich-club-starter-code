@@ -10,6 +10,11 @@ import java.util.ArrayList;
 
 public class JsonUtils {
 
+    /**
+     * Creates sandwich object from received json
+     * @param json the json response
+     * @return sandwich created from json or null if error occurs during extraction
+     */
     public static Sandwich parseSandwichJson(String json) {
         Sandwich sandwich = null;
         try {

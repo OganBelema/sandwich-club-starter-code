@@ -60,11 +60,18 @@ public class DetailActivity extends AppCompatActivity {
         setTitle(sandwich.getMainName());
     }
 
+    /**
+     * Closes activity if sandwich is null and displays message
+     */
     private void closeOnError() {
         finish();
         Toast.makeText(this, R.string.detail_error_message, Toast.LENGTH_SHORT).show();
     }
 
+    /**
+     * Populates the UI with the sandwich data
+     * @param sandwich the sandwich created from the json
+     */
     private void populateUI(Sandwich sandwich) {
         mDescriptionTextView.setText(sandwich.getDescription());
         mOriginTextView.setText(sandwich.getPlaceOfOrigin());
